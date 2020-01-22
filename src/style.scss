@@ -1,7 +1,37 @@
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .this {
     .is {
         .sass {
-            color: red;
+            h1 {
+                text-align: center;
+                color: red;
+                animation: scale 0.5s infinite;
+                font-size: 3rem;
+            }
         }
     }
 }
