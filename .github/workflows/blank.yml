@@ -9,11 +9,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - name: move build files
+      - name: Process files
         run: |
             mkdir build
             cp index.html build
-      - name: copy file via ssh key
+      - name: Copy file via scp
         uses: appleboy/scp-action@master
         env:
             HOST: ${{ secrets.HOST }}
