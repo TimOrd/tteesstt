@@ -1,12 +1,10 @@
-const fs = require('fs');
+// Move WHAT?
+let files = [
+    '*.html',
+    'dist/**/*'
+];
 
-// Create /build
-fs.existsSync("build") || fs.mkdirSync("build");
-
-// Get files
-let files = fs.readFileSync('build.txt').toString().split("\n");
-
-// Add output path
+// Add output path (weirdly copyfile needs the output dir as the last index??)
 files.push('build')
 
 // Copy globs to /build
