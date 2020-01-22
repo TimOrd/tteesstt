@@ -8,9 +8,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: npm setup
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
       - name: Process files
         run: |
+            node -v
             mkdir build
             cp index.html build
       - name: Copy file via scp
