@@ -16,9 +16,11 @@ jobs:
           node-version: "10.x"
       - name: Process files
         run: |
-            npm install bootstrap
+            npm install
+            npm run build
             mkdir build
             cp index.html build
+            cp -a dist/. build
       - name: Copy file via scp
         uses: appleboy/scp-action@master
         env:
