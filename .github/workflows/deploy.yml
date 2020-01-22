@@ -8,15 +8,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout master
         uses: actions/checkout@master
-      - name: npm setup
+      - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: "10.x"
       - name: Process files
         run: |
-            node -v
+            npm install bootstrap
             mkdir build
             cp index.html build
       - name: Copy file via scp
