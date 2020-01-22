@@ -20,7 +20,7 @@ jobs:
             npm run build
             mkdir build
             cp index.html build
-            cp -a dist/. build
+            cp -r dist build/dist
       - name: Copy file via scp
         uses: appleboy/scp-action@master
         env:
