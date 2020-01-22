@@ -1,4 +1,4 @@
-name: CI
+name: Deploy
 
 on: [push]
 
@@ -22,3 +22,4 @@ jobs:
         with:
             source: "build"
             target: ${{ secrets.ROOT }}
+            strip_components: 1
